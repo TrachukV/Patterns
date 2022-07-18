@@ -68,8 +68,8 @@ class FactoryCarbonatedDrinks {
 }
 
 void main(List<String> arguments) {
-  for (var value in SugarDrink.values) {
-    var drink = FactoryCarbonatedDrinks.factory(value);
+  for (final value in SugarDrink.values) {
+    final drink = FactoryCarbonatedDrinks.factory(value);
     print('$drink calories ${drink.procentOFSugar()}');
   }
 }
