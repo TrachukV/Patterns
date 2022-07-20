@@ -1,9 +1,11 @@
+//Список идентификаторов напитков
 enum SugarDrink {
   cocaCola,
   fanta,
   sprite,
 }
 
+//Интерфейс продукта
 abstract class CarbonatedDrinks {
   final int size;
   final String name;
@@ -17,6 +19,7 @@ abstract class CarbonatedDrinks {
   }
 }
 
+//Конкретный продукт
 class CocaCola extends CarbonatedDrinks {
   final double sugar;
   CocaCola(String name, int size, this.sugar) : super(name, size);
@@ -50,6 +53,7 @@ class Sprite extends CarbonatedDrinks {
   }
 }
 
+//Фабрика
 class FactoryCarbonatedDrinks {
   static CarbonatedDrinks factory(SugarDrink sugarDrink) {
     switch (sugarDrink) {
